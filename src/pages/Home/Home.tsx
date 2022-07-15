@@ -5,7 +5,7 @@ import {
   buttonGradient,
   headingResSize,
   overlayBg,
-} from '@constants/index';
+} from 'src/constants';
 
 import Navbar from '@components/Navbar/Navbar';
 import MiddleSection from '@components/MiddleSection/MiddleSection';

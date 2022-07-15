@@ -8,3 +8,5 @@ export const buttonGradient = {
 };
 
 export const bgGradient = 'linear(to-b, orange.100, purple.300)';
+
+export const headingResSize = { base: 'xl', sm: '2xl' };

@@ -55,7 +55,6 @@ const Home = () => {
           </Button>
         </HStack>
       </Box>
-
       <MiddleSection />
     </Box>
   );

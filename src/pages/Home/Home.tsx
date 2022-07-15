@@ -1,8 +1,8 @@
 import { Box } from '@chakra-ui/react';
 
-import { overlayBg } from '../../constants/index';
+import { overlayBg } from '@constants/index';
 
-import Navbar from '../../components/Navbar/Navbar';
+import Navbar from '@components/Navbar/Navbar';
 
 const Home = () => {
   return (

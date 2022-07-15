@@ -1,9 +1,16 @@
+import { Box } from '@chakra-ui/react';
+
+import CrimeBg from '../../assets/images/crime-bg.jpg';
+
+import Navbar from '../../components/Navbar/Navbar';
+
 const Home = () => {
   return (
-    <div>
+    <Box bg={`url('${CrimeBg}')`}>
+      <Navbar />
       <h2>Home</h2>
-    </div>
-  )
-}
+    </Box>
+  );
+};
 
-export default Home
+export default Home;

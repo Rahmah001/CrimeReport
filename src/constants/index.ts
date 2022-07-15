@@ -2,6 +2,7 @@ import CrimeBg from '@assets/images/crime-bg.jpg';
 import Vehicle from '@assets/images/vehicle.jpg';
 import Murder from '@assets/images/murder.jpg';
 import Kidnap from '@assets/images/kidnap.jpg';
+import { CrimeData } from 'src/interfaces';
 
 export const overlayBg = `linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('${CrimeBg}') no-repeat center`;
 
@@ -14,7 +15,7 @@ export const bgGradient = 'linear(to-b, orange.100, purple.300)';
 
 export const headingResSize = { base: 'xl', sm: '2xl' };
 
-export const crimeDataArray = [
+export const crimeDataArray: CrimeData[] = [
   {
     id: 0,
     crimeTitle: 'Vehicle Theft',

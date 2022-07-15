@@ -1,4 +1,8 @@
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Heading, Stack } from '@chakra-ui/react';
+
+import CrimeCard from '@components/CrimeCard/CrimeCard';
+
+import { crimeDataArray } from 'src/constants';
 
 const CrimeSection = () => {
   return (
@@ -9,6 +13,12 @@ const CrimeSection = () => {
       <Heading color={'#385898'} fontWeight={'extrabold'} size={'2xl'}>
         crime incidence.
       </Heading>
+
+      <Stack spacing={4} direction={{ base: 'column', sm: 'row' }}>
+        {crimeDataArray.map((crimeData) => (
+          <CrimeCard crimeData={crimeData} />
+        ))}
+      </Stack>
     </Box>
   );
 };

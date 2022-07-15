@@ -1,12 +1,12 @@
 import { Box } from '@chakra-ui/react';
 
-import CrimeBg from '../../assets/images/crime-bg.jpg';
+import { overlayBg } from '../../constants/index';
 
 import Navbar from '../../components/Navbar/Navbar';
 
 const Home = () => {
   return (
-    <Box bg={`url('${CrimeBg}')`}>
+    <Box h={'500px'} bg={overlayBg} bgSize={'cover'}>
       <Navbar />
       <h2>Home</h2>
     </Box>

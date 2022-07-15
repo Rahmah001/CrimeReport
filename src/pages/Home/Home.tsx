@@ -9,6 +9,7 @@ import {
 
 import Navbar from '@components/Navbar/Navbar';
 import MiddleSection from '@components/MiddleSection/MiddleSection';
+import CrimeSection from '@components/CrimeSection/CrimeSection';
 
 const Home = () => {
   return (
@@ -56,6 +57,9 @@ const Home = () => {
         </HStack>
       </Box>
       <MiddleSection />
+      <Box mb={8}>
+        <CrimeSection />
+      </Box>
     </Box>
   );
 };

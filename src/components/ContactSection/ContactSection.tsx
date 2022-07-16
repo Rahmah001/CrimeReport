@@ -41,7 +41,14 @@ const ContactSection = () => {
       })
       .catch((err: FirestoreError) => {
         setIsLoading(false);
-        console.log('Error');
+        console.log('Error', err.message);
+        toast({
+          status: 'error',
+          containerStyle: {
+            fontSize: '14px',
+          },
+          title: 'An Error occurred, Please try again.',
+        });
       });
   };
 

@@ -49,7 +49,6 @@ const Home = () => {
             _focus={buttonGradient}
             size={'sm'}
             color={'#000'}
-            colorScheme="blue"
           >
             Report crime
           </Button>

@@ -1,7 +1,10 @@
 import {
   Box,
+  Button,
   Container,
+  FormControl,
   Heading,
+  Input,
   ListItem,
   SimpleGrid,
   Text,
@@ -10,6 +13,8 @@ import {
 
 import FooterBg from '@assets/images/footer-bg.jpg';
 import { Link } from 'react-router-dom';
+
+import { bgGradient, buttonGradient } from 'src/constants';
 
 const Footer = () => {
   return (
@@ -30,8 +35,13 @@ const Footer = () => {
         </Box>
       </Container>
 
-      <Container>
-        <SimpleGrid spacing={6} mt={'4rem'} columns={{ base: 2, sm: 3 }}>
+      <Container maxWidth={'container.md'}>
+        <SimpleGrid
+          px={{ base: 6, sm: 0 }}
+          spacing={3}
+          mt={'4rem'}
+          columns={{ base: 2, sm: 3 }}
+        >
           <Box>
             <Text fontWeight={'medium'} fontSize={'xl'} color={'#C6F6D5'}>
               Our Support
@@ -72,6 +82,32 @@ const Footer = () => {
                 <Link to={'#'}>Licenses</Link>
               </ListItem>
             </UnorderedList>
+          </Box>
+          <Box color={'white'}>
+            <Heading fontSize={'lg'}>Newslatter</Heading>
+            <Text fontSize={'14px'} mt={3}>
+              Subscribe now to get daily updates
+            </Text>
+            <FormControl my={3}>
+              <Input
+                size={'sm'}
+                bgColor={'white'}
+                borderRadius={'md'}
+                id="email"
+                type="email"
+                placeholder={'Email Address'}
+              />
+            </FormControl>
+            <Button
+              type={'submit'}
+              bgGradient={bgGradient}
+              _hover={buttonGradient}
+              _focus={buttonGradient}
+              color={'#000'}
+              size={'sm'}
+            >
+              Subscribe
+            </Button>
           </Box>
         </SimpleGrid>
       </Container>

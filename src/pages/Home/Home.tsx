@@ -86,7 +86,9 @@ const Home = () => {
       </Box>
 
       <Box textAlign={'center'} my={'4rem'} ref={crimeRef}>
-        <Text>Fill up to get a qote</Text>
+        <Text fontWeight={'medium'} fontSize={'lg'}>
+          Fill up to get a qote
+        </Text>
         <Heading fontWeight={'extrabold'}>
           World's Leading Law Consultency Agency!
         </Heading>

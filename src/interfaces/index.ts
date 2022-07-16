@@ -11,4 +11,5 @@ export interface CrimeCardProps {
 
 export interface NavbarProps {
   scrollToCrime: () => void;
+  scrollToContact: () => void;
 }

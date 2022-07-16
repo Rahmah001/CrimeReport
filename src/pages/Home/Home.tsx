@@ -32,12 +32,18 @@ const Home = () => {
       behavior: 'smooth',
     });
 
+  const scrollToAbout = (): void =>
+    crimeRef?.current?.scrollIntoView({
+      behavior: 'smooth',
+    });
+
   return (
     <Box>
       <Box bg={overlayBg} bgSize={'cover'} h={{ base: '500px', sm: '600px' }}>
         <Navbar
           scrollToCrime={scrollToCrime}
           scrollToContact={scrollToContact}
+          scrollToAbout={scrollToAbout}
         />
         <Box
           textAlign={'center'}
@@ -79,7 +85,10 @@ const Home = () => {
           </Button>
         </HStack>
       </Box>
-      <MiddleSection />
+
+      <Box ref={crimeRef}>
+        <MiddleSection />
+      </Box>
 
       <Box mb={8} ref={crimeRef}>
         <CrimeSection />

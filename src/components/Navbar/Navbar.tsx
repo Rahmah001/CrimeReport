@@ -14,8 +14,9 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToCrime, scrollToContact }) => {
       display={'flex'}
       justifyContent={'space-between'}
       alignItems={'center'}
+      flexDir={{ base: 'column', sm: 'row' }}
       height={'7vh'}
-      pt={'2.5rem'}
+      pt={'1.5rem'}
       color={'#fff'}
       maxWidth={'container.lg'}
     >
@@ -23,7 +24,11 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToCrime, scrollToContact }) => {
         CrimeReport.
       </Heading>
 
-      <HStack spacing={7}>
+      <HStack
+        spacing={7}
+        mt={{ base: '4', sm: 0 }}
+        fontSize={{ base: 'sm', sm: 'md' }}
+      >
         <ChakraLink as={Link} to={'/about'}>
           About
         </ChakraLink>

@@ -4,10 +4,10 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import { ChakraProvider } from '@chakra-ui/react';
 
-import App from './App';
 import ScrollTop from '@components/ScrollTop/ScrollTop';
+import { theme } from '@assets/theme';
 
-import { theme } from './assets/theme';
+import App from './App';
 
 import './index.css';
 

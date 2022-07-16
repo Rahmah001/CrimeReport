@@ -8,10 +8,9 @@ import {
   Input,
   Button,
   Text,
+  Link,
 } from '@chakra-ui/react';
 import { bgGradient, buttonGradient } from 'src/constants';
-
-import { Link } from 'react-router-dom';
 
 const NewsLetter = () => {
   return (
@@ -27,19 +26,19 @@ const NewsLetter = () => {
         </Text>
         <UnorderedList mt={2} color={'white'}>
           <ListItem>
-            <Link to={'#'}>Advanced</Link>
+            <Link href={'#'}>Advanced</Link>
           </ListItem>
           <ListItem>
-            <Link to={'#'}>Management</Link>
+            <Link href={'#'}>Management</Link>
           </ListItem>
           <ListItem>
-            <Link to={'#'}>Corporate</Link>
+            <Link href={'#'}>Corporate</Link>
           </ListItem>
           <ListItem>
-            <Link to={'#'}>Customer</Link>
+            <Link href={'#'}>Customer</Link>
           </ListItem>
           <ListItem>
-            <Link to={'#'}>Information</Link>
+            <Link href={'#'}>Information</Link>
           </ListItem>
         </UnorderedList>
       </Box>
@@ -49,16 +48,16 @@ const NewsLetter = () => {
         </Text>
         <UnorderedList mt={2} color={'white'}>
           <ListItem>
-            <Link to={'#'}>New Law</Link>
+            <Link href={'#'}>New Law</Link>
           </ListItem>
           <ListItem>
-            <Link to={'#'}>About</Link>
+            <Link href={'#'}>About</Link>
           </ListItem>
           <ListItem>
-            <Link to={'#'}>Privacy Policy</Link>
+            <Link href={'#'}>Privacy Policy</Link>
           </ListItem>
           <ListItem>
-            <Link to={'#'}>Licenses</Link>
+            <Link href={'#'}>Licenses</Link>
           </ListItem>
         </UnorderedList>
       </Box>

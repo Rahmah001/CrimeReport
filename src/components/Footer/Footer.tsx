@@ -1,12 +1,21 @@
-import { Box, Container, Heading, SimpleGrid, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Container,
+  Heading,
+  ListItem,
+  SimpleGrid,
+  Text,
+  UnorderedList,
+} from '@chakra-ui/react';
 
 import FooterBg from '@assets/images/footer-bg.jpg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <Box
       py={'4rem'}
-      bg={`linear-gradient(0deg, rgba(20, 15, 0, 0.6), rgba(0, 0, 0, 0.6)),url('${FooterBg}') no-repeat center`}
+      bg={`linear-gradient(0deg, rgba(20, 15, 0, 0.8), rgba(0, 0, 0, 0.8)),url('${FooterBg}') no-repeat center`}
       bgSize={'cover'}
     >
       <Container maxW={'conatiner.lg'}>
@@ -19,10 +28,51 @@ const Footer = () => {
           </Heading>
           <Heading size={'lg'}>youremail@gmail.com</Heading>
         </Box>
+      </Container>
 
-        <SimpleGrid column={{ base: 2, sm: 3 }}>
-          <Box></Box>
-          <Box></Box>
+      <Container>
+        <SimpleGrid spacing={6} mt={'4rem'} columns={{ base: 2, sm: 3 }}>
+          <Box>
+            <Text fontWeight={'medium'} fontSize={'xl'} color={'#C6F6D5'}>
+              Our Support
+            </Text>
+            <UnorderedList mt={2} color={'white'}>
+              <ListItem>
+                <Link to={'#'}>Advanced</Link>
+              </ListItem>
+              <ListItem>
+                <Link to={'#'}>Management</Link>
+              </ListItem>
+              <ListItem>
+                <Link to={'#'}>Corporate</Link>
+              </ListItem>
+              <ListItem>
+                <Link to={'#'}>Customer</Link>
+              </ListItem>
+              <ListItem>
+                <Link to={'#'}>Information</Link>
+              </ListItem>
+            </UnorderedList>
+          </Box>
+          <Box>
+            <Text fontWeight={'medium'} fontSize={'xl'} color={'#C6F6D5'}>
+              Quick Link
+            </Text>
+            <UnorderedList mt={2} color={'white'}>
+              <ListItem>
+                <Link to={'#'}>New Law</Link>
+              </ListItem>
+              <ListItem>
+                <Link to={'#'}>About</Link>
+              </ListItem>
+              <ListItem>
+                <Link to={'#'}>Privacy Policy</Link>
+              </ListItem>
+              <ListItem>
+                <Link to={'#'}>Licenses</Link>
+              </ListItem>
+            </UnorderedList>
+          </Box>
         </SimpleGrid>
       </Container>
     </Box>

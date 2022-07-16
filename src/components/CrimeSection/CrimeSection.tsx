@@ -19,7 +19,7 @@ const CrimeSection = () => {
         crime incidence.
       </Heading>
 
-      <Container maxW={'container.lg'} my={'4rem'}>
+      <Container maxW={'container.lg'} mt={'3rem'}>
         <SimpleGrid spacing={5} columns={{ base: 1, sm: 2, md: 3 }}>
           {crimeDataArray.map((crimeData) => (
             <CrimeCard key={crimeData.id} crimeData={crimeData} />

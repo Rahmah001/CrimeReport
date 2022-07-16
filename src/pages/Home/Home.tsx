@@ -15,7 +15,10 @@ import ContactSection from '@components/ContactSection/ContactSection';
 import Footer from '@components/Footer/Footer';
 
 const Home = () => {
+  const aboutRef = useRef<HTMLDivElement | null>(null);
   const crimeRef = useRef<HTMLDivElement | null>(null);
+  const contactRef = useRef<HTMLDivElement | null>(null);
+  const reportRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToCrime = (): void =>
     crimeRef?.current?.scrollIntoView({
@@ -23,17 +26,17 @@ const Home = () => {
     });
 
   const scrollToContact = (): void =>
-    crimeRef?.current?.scrollIntoView({
+    contactRef?.current?.scrollIntoView({
       behavior: 'smooth',
     });
 
   const scrollToReport = (): void =>
-    crimeRef?.current?.scrollIntoView({
+    reportRef?.current?.scrollIntoView({
       behavior: 'smooth',
     });
 
   const scrollToAbout = (): void =>
-    crimeRef?.current?.scrollIntoView({
+    aboutRef?.current?.scrollIntoView({
       behavior: 'smooth',
     });
 
@@ -86,7 +89,7 @@ const Home = () => {
         </HStack>
       </Box>
 
-      <Box ref={crimeRef}>
+      <Box ref={aboutRef}>
         <MiddleSection />
       </Box>
 
@@ -94,7 +97,7 @@ const Home = () => {
         <CrimeSection />
       </Box>
 
-      <Box textAlign={'center'} my={'4rem'} ref={crimeRef}>
+      <Box textAlign={'center'} my={'4rem'} ref={reportRef}>
         <Text fontWeight={'medium'} fontSize={'lg'}>
           Fill up to get a Quote
         </Text>
@@ -104,7 +107,7 @@ const Home = () => {
         <ContactSection />
       </Box>
 
-      <Box ref={crimeRef}>
+      <Box ref={contactRef}>
         <Footer />
       </Box>
     </Box>

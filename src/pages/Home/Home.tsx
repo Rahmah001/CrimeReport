@@ -11,6 +11,7 @@ import Navbar from '@components/Navbar/Navbar';
 import MiddleSection from '@components/MiddleSection/MiddleSection';
 import CrimeSection from '@components/CrimeSection/CrimeSection';
 import ContactSection from '@components/ContactSection/ContactSection';
+import Footer from '@components/Footer/Footer';
 
 const Home = () => {
   return (
@@ -52,7 +53,7 @@ const Home = () => {
           >
             Report crime
           </Button>
-          <Button variant={'outline'} size={'sm'} colorScheme="whiteAlpha">
+          <Button variant={'outline'} size={'sm'} colorScheme="facebook">
             Committed to safety
           </Button>
         </HStack>
@@ -69,6 +70,8 @@ const Home = () => {
 
         <ContactSection />
       </Box>
+
+      <Footer />
     </Box>
   );
 };

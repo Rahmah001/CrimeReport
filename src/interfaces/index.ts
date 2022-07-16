@@ -8,3 +8,7 @@ export interface CrimeData {
 export interface CrimeCardProps {
   crimeData: CrimeData;
 }
+
+export interface NavbarProps {
+  scrollToCrime: () => void;
+}

@@ -3,6 +3,7 @@ import {
   Container,
   FormControl,
   FormLabel,
+  HStack,
   Input,
   Select,
   Stack,
@@ -12,19 +13,16 @@ import { bgGradient, buttonGradient } from 'src/constants';
 const ContactSection = () => {
   return (
     <Container maxWidth={'xl'} mt={'3rem'}>
-      <Stack direction={{ base: 'column', sm: 'row' }} spacing={5}>
+      <HStack spacing={5}>
         <FormControl>
-          <FormLabel htmlFor="name">Name</FormLabel>
-          <Input id="name" type="text" />
+          <Input id="name" type="text" placeholder="Name" />
         </FormControl>
         <FormControl>
-          <FormLabel htmlFor="phoneNumber">Phone number</FormLabel>
-          <Input id="phoneNumber" type="text" />
+          <Input id="phoneNumber" type="text" placeholder="Phone number" />
         </FormControl>
-      </Stack>
-      <Stack direction={{ base: 'column', sm: 'row' }} spacing={5} my={4}>
+      </HStack>
+      <HStack spacing={5} my={4}>
         <FormControl>
-          <FormLabel htmlFor="crime">Select crime</FormLabel>
           <Select id="crime" placeholder="Select crime">
             <option>Armed Robbery</option>
             <option>Murder</option>
@@ -35,10 +33,9 @@ const ContactSection = () => {
           </Select>
         </FormControl>
         <FormControl>
-          <FormLabel htmlFor="email">Email</FormLabel>
-          <Input id="email" type="email" />
+          <Input id="email" type="email" placeholder={'Email Address'} />
         </FormControl>
-      </Stack>
+      </HStack>
       <Button
         mt={3}
         type={'submit'}
@@ -46,7 +43,6 @@ const ContactSection = () => {
         _hover={buttonGradient}
         _focus={buttonGradient}
         color={'#000'}
-        colorScheme="blue"
       >
         Submit now!
       </Button>

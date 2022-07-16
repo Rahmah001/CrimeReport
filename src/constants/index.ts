@@ -2,6 +2,7 @@ import CrimeBg from '@assets/images/crime-bg.jpg';
 import Vehicle from '@assets/images/vehicle.jpg';
 import Murder from '@assets/images/murder.jpg';
 import Kidnap from '@assets/images/kidnap.jpg';
+
 import { CrimeData } from 'src/interfaces';
 
 export const overlayBg = `linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url('${CrimeBg}') no-repeat center`;

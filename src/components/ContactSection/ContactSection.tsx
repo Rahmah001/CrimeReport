@@ -37,6 +37,7 @@ const ContactSection = () => {
           },
           title: 'Crime submitted successfully!',
           description: 'Expect a response from us ASAP!',
+          isClosable: true,
         });
       })
       .catch((err: FirestoreError) => {
@@ -48,6 +49,7 @@ const ContactSection = () => {
             fontSize: '14px',
           },
           title: 'An Error occurred, Please try again.',
+          isClosable: true,
         });
       });
   };

@@ -1,4 +1,4 @@
-import { Box, Heading, Stack } from '@chakra-ui/react';
+import { Box, Container, Heading, SimpleGrid, Stack } from '@chakra-ui/react';
 
 import CrimeCard from '@components/CrimeCard/CrimeCard';
 
@@ -14,11 +14,13 @@ const CrimeSection = () => {
         crime incidence.
       </Heading>
 
-      <Stack spacing={4} direction={{ base: 'column', sm: 'row' }}>
-        {crimeDataArray.map((crimeData) => (
-          <CrimeCard crimeData={crimeData} />
-        ))}
-      </Stack>
+      <Container maxW={'container.lg'} mt={'4rem'}>
+        <SimpleGrid spacing={4} columns={{ base: 1, sm: 2, md: 3 }}>
+          {crimeDataArray.map((crimeData) => (
+            <CrimeCard crimeData={crimeData} />
+          ))}
+        </SimpleGrid>
+      </Container>
     </Box>
   );
 };

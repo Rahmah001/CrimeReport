@@ -83,7 +83,7 @@ const Footer = () => {
               </ListItem>
             </UnorderedList>
           </Box>
-          <Box color={'white'} width={{ base: '380px', sm: 'inherit' }}>
+          <Box color={'white'} width={{ base: '280px', sm: 'inherit' }}>
             <Heading fontSize={'lg'}>Newslatter</Heading>
             <Text fontSize={'14px'} mt={3}>
               Subscribe now to get daily updates

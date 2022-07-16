@@ -1,12 +1,21 @@
-import { Container, Heading, Text } from '@chakra-ui/react';
+import {
+  Container,
+  Heading,
+  HStack,
+  Link as ChakraLink,
+} from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+import { NavbarProps } from 'src/interfaces';
+
+const Navbar: React.FC<NavbarProps> = ({ scrollToCrime, scrollToContact }) => {
   return (
     <Container
       display={'flex'}
       justifyContent={'space-between'}
+      alignItems={'center'}
       height={'7vh'}
-      py={4}
+      pt={'2.5rem'}
       color={'#fff'}
       maxWidth={'container.lg'}
     >
@@ -14,7 +23,17 @@ const Navbar = () => {
         CrimeReport.
       </Heading>
 
-      <Text>Home</Text>
+      <HStack spacing={7}>
+        <ChakraLink as={Link} to={'/about'}>
+          About
+        </ChakraLink>
+        <ChakraLink onClick={scrollToCrime} as={Link} to={'#'}>
+          Services
+        </ChakraLink>
+        <ChakraLink onClick={scrollToContact} as={Link} to={'#'}>
+          Contact
+        </ChakraLink>
+      </HStack>
     </Container>
   );
 };

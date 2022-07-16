@@ -16,7 +16,7 @@ import Footer from '@components/Footer/Footer';
 const Home = () => {
   return (
     <Box>
-      <Box h={{ base: '500px', sm: '600px' }} bg={overlayBg} bgSize={'cover'}>
+      <Box bg={overlayBg} bgSize={'cover'} h={{ base: '500px', sm: '600px' }}>
         <Navbar />
         <Box
           textAlign={'center'}
@@ -67,10 +67,8 @@ const Home = () => {
         <Heading fontWeight={'extrabold'}>
           World's Leading Law Consultency Agency!
         </Heading>
-
         <ContactSection />
       </Box>
-
       <Footer />
     </Box>
   );

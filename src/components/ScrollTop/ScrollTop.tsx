@@ -4,6 +4,8 @@ import { Box, IconButton } from '@chakra-ui/react';
 
 import { ArrowUpIcon } from '@chakra-ui/icons';
 
+import { bgGradient, buttonGradient } from 'src/constants';
+
 const ScrollTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -28,15 +30,17 @@ const ScrollTop = () => {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
   return (
-    <Box position="fixed" zIndex={5} bottom={20} right={5}>
+    <Box position="fixed" zIndex={5} bottom={10} right={5}>
       {isVisible && (
         <IconButton
           aria-label="go-up"
           onClick={scrollToTop}
-          rounded="md"
-          icon={<ArrowUpIcon boxSize={'25px'} />}
+          rounded="full"
+          icon={<ArrowUpIcon w={5} h={5} />}
           size="sm"
-          colorScheme="primary"
+          bgGradient={bgGradient}
+          _hover={buttonGradient}
+          _focus={buttonGradient}
         />
       )}
     </Box>

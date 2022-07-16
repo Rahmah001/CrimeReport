@@ -20,10 +20,6 @@ const MiddleSection = () => {
               Dont Feel Helpless...
             </Heading>
             <Heading fontWeight={'extrabold'}>We Fight for safety.</Heading>
-            <Text mt={3}>
-              Utenim ad minim veniam, quisnostrud exercitation ullamcolaboris
-              nisi utaliquip ex eacommodoconsequat is auteirure.
-            </Text>
             <Text fontWeight={'semibold'} my={4}>
               Your Safety is priority.
             </Text>

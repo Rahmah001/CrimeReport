@@ -14,7 +14,7 @@ const Footer = () => {
       <Container maxW={'conatiner.lg'}>
         <Box color={'white'} textAlign={'center'}>
           <Text fontSize={'xl'} fontWeight={'semibold'}>
-            Receive updates and latest news direct from Simply enter.
+            Receive updates and latest news.
           </Text>
           <Heading size={'lg'} mt={'1rem'}>
             +234 812 723 6137

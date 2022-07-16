@@ -84,7 +84,7 @@ const Footer = () => {
             </UnorderedList>
           </Box>
           <Box color={'white'} width={{ base: '280px', sm: 'inherit' }}>
-            <Heading fontSize={'lg'}>Newslatter</Heading>
+            <Heading fontSize={'lg'}>Newsletter</Heading>
             <Text fontSize={'14px'} mt={3}>
               Subscribe now to get daily updates
             </Text>

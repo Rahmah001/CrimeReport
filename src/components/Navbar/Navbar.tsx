@@ -2,7 +2,11 @@ import { Container, Heading, HStack, Link } from '@chakra-ui/react';
 
 import { NavbarProps } from 'src/interfaces';
 
-const Navbar: React.FC<NavbarProps> = ({ scrollToCrime, scrollToContact }) => {
+const Navbar: React.FC<NavbarProps> = ({
+  scrollToCrime,
+  scrollToContact,
+  scrollToAbout,
+}) => {
   return (
     <Container
       display={'flex'}
@@ -23,7 +27,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToCrime, scrollToContact }) => {
         mt={{ base: '4', sm: 0 }}
         fontSize={{ base: 'sm', sm: 'md' }}
       >
-        <Link>About</Link>
+        <Link onClick={scrollToAbout}>About</Link>
         <Link onClick={scrollToCrime}>Services</Link>
         <Link onClick={scrollToContact}>Contact</Link>
       </HStack>

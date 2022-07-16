@@ -2,11 +2,11 @@ import { Box, Container, Heading, SimpleGrid, Stack } from '@chakra-ui/react';
 
 import CrimeCard from '@components/CrimeCard/CrimeCard';
 
-import { crimeDataArray } from 'src/constants';
+import { buttonGradient, crimeDataArray } from 'src/constants';
 
 const CrimeSection = () => {
   return (
-    <Box bgGradient={'linear(to-b, orange.100, purple.300)'} py={14}>
+    <Box bgGradient={buttonGradient.bgGradient} py={14}>
       <Heading textAlign={'center'} fontWeight={'extrabold'} fontSize={'2xl'}>
         We are here for any form of
       </Heading>

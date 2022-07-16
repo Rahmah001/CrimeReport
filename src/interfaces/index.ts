@@ -14,3 +14,10 @@ export interface NavbarProps {
   scrollToContact: () => void;
   scrollToAbout: () => void;
 }
+
+export interface formValues {
+  crime: string;
+  email: string;
+  name: string;
+  phoneNumber: string;
+}

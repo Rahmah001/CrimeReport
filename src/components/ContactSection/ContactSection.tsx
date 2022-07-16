@@ -45,7 +45,6 @@ const ContactSection = () => {
         bgGradient={bgGradient}
         _hover={buttonGradient}
         _focus={buttonGradient}
-        size={'sm'}
         color={'#000'}
         colorScheme="blue"
       >

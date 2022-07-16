@@ -1,10 +1,4 @@
-import {
-  Container,
-  Heading,
-  HStack,
-  Link as ChakraLink,
-} from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
+import { Container, Heading, HStack, Link } from '@chakra-ui/react';
 
 import { NavbarProps } from 'src/interfaces';
 
@@ -29,15 +23,9 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToCrime, scrollToContact }) => {
         mt={{ base: '4', sm: 0 }}
         fontSize={{ base: 'sm', sm: 'md' }}
       >
-        <ChakraLink as={Link} to={'/about'}>
-          About
-        </ChakraLink>
-        <ChakraLink onClick={scrollToCrime} as={Link} to={'#'}>
-          Services
-        </ChakraLink>
-        <ChakraLink onClick={scrollToContact} as={Link} to={'#'}>
-          Contact
-        </ChakraLink>
+        <Link>About</Link>
+        <Link onClick={scrollToCrime}>Services</Link>
+        <Link onClick={scrollToContact}>Contact</Link>
       </HStack>
     </Container>
   );

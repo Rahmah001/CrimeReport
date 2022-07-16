@@ -27,6 +27,11 @@ const Home = () => {
       behavior: 'smooth',
     });
 
+  const scrollToReport = (): void =>
+    crimeRef?.current?.scrollIntoView({
+      behavior: 'smooth',
+    });
+
   return (
     <Box>
       <Box bg={overlayBg} bgSize={'cover'} h={{ base: '500px', sm: '600px' }}>
@@ -65,6 +70,7 @@ const Home = () => {
             _focus={buttonGradient}
             size={'sm'}
             color={'#000'}
+            onClick={scrollToReport}
           >
             Report crime
           </Button>
@@ -79,7 +85,7 @@ const Home = () => {
         <CrimeSection />
       </Box>
 
-      <Box textAlign={'center'} my={'4rem'}>
+      <Box textAlign={'center'} my={'4rem'} ref={crimeRef}>
         <Text>Fill up to get a qote</Text>
         <Heading fontWeight={'extrabold'}>
           World's Leading Law Consultency Agency!

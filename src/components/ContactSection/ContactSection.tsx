@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import {
   Button,
   Container,
@@ -5,17 +7,42 @@ import {
   HStack,
   Input,
   Select,
+  useToast,
 } from '@chakra-ui/react';
+import { addDoc, collection, doc, FirestoreError } from 'firebase/firestore';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 import { bgGradient, buttonGradient } from 'src/constants';
 import { formValues } from 'src/interfaces';
+import { firestoreDb } from 'src/libs';
 
 const ContactSection = () => {
   const { register, handleSubmit } = useForm<formValues>();
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleCrimeSubmit: SubmitHandler<formValues> = (data) => {
+  const toast = useToast();
+
+  const handleCrimeSubmit: SubmitHandler<formValues> = async (data) => {
     console.log(data);
+    setIsLoading(true);
+    const collectioRef = collection(firestoreDb, 'crimes');
+    await addDoc(collectioRef, data)
+      .then(() => {
+        setIsLoading(false);
+        console.log('sent!');
+        toast({
+          status: 'success',
+          containerStyle: {
+            fontSize: '14px',
+          },
+          title: 'Crime submitted successfully!',
+          description: 'Expect a response from us ASAP!',
+        });
+      })
+      .catch((err: FirestoreError) => {
+        setIsLoading(false);
+        console.log('Error');
+      });
   };
 
   return (
@@ -71,6 +98,7 @@ const ContactSection = () => {
           _hover={buttonGradient}
           _focus={buttonGradient}
           color={'#000'}
+          isLoading={isLoading}
         >
           Submit now!
         </Button>

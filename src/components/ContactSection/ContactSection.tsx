@@ -2,12 +2,11 @@ import {
   Button,
   Container,
   FormControl,
-  FormLabel,
   HStack,
   Input,
   Select,
-  Stack,
 } from '@chakra-ui/react';
+
 import { bgGradient, buttonGradient } from 'src/constants';
 
 const ContactSection = () => {
@@ -21,7 +20,7 @@ const ContactSection = () => {
           <Input id="phoneNumber" type="text" placeholder="Phone number" />
         </FormControl>
       </HStack>
-      <HStack spacing={5} my={4}>
+      <HStack spacing={5} my={7}>
         <FormControl>
           <Select id="crime" placeholder="Select crime">
             <option>Armed Robbery</option>

@@ -1,8 +1,14 @@
-import { Box, Container, Heading, Text } from '@chakra-ui/react';
+import { Box, Container, Heading, SimpleGrid, Text } from '@chakra-ui/react';
+
+import FooterBg from '@assets/images/footer-bg.jpg';
 
 const Footer = () => {
   return (
-    <Box py={'4rem'} bgColor={'#386896'}>
+    <Box
+      py={'4rem'}
+      bg={`linear-gradient(0deg, rgba(20, 15, 0, 0.6), rgba(0, 0, 0, 0.6)),url('${FooterBg}') no-repeat center`}
+      bgSize={'cover'}
+    >
       <Container maxW={'conatiner.lg'}>
         <Box color={'white'} textAlign={'center'}>
           <Text fontSize={'xl'} fontWeight={'semibold'}>
@@ -13,6 +19,11 @@ const Footer = () => {
           </Heading>
           <Heading size={'lg'}>youremail@gmail.com</Heading>
         </Box>
+
+        <SimpleGrid column={{ base: 2, sm: 3 }}>
+          <Box></Box>
+          <Box></Box>
+        </SimpleGrid>
       </Container>
     </Box>
   );

@@ -1,8 +1,8 @@
 import { Box, Container, Heading, Text } from '@chakra-ui/react';
 
-import FooterBg from '@assets/images/footer-bg.jpg';
-
 import NewsLetter from '@components/NewsLetter/NewsLetter';
+
+import FooterBg from '@assets/images/footer-bg.jpg';
 
 const Footer = () => {
   return (

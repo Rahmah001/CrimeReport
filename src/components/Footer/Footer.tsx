@@ -38,7 +38,7 @@ const Footer = () => {
       <Container maxWidth={'container.md'}>
         <SimpleGrid
           px={{ base: 6, sm: 0 }}
-          spacing={3}
+          spacing={5}
           mt={'4rem'}
           columns={{ base: 2, sm: 3 }}
         >
@@ -83,7 +83,7 @@ const Footer = () => {
               </ListItem>
             </UnorderedList>
           </Box>
-          <Box color={'white'}>
+          <Box color={'white'} width={{ base: '380px', sm: 'inherit' }}>
             <Heading fontSize={'lg'}>Newslatter</Heading>
             <Text fontSize={'14px'} mt={3}>
               Subscribe now to get daily updates

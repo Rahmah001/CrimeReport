@@ -4,7 +4,7 @@ import Murder from '@assets/images/murder.jpg';
 import Kidnap from '@assets/images/kidnap.jpg';
 import { CrimeData } from 'src/interfaces';
 
-export const overlayBg = `linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('${CrimeBg}') no-repeat center`;
+export const overlayBg = `linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url('${CrimeBg}') no-repeat center`;
 
 export const buttonGradient = {
   bgGradient: 'linear(to-b, orange.100, purple.300)',

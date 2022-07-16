@@ -9,7 +9,7 @@ const CrimeCard: React.FC<CrimeCardProps> = ({ crimeData }) => {
     <Box
       p={8}
       borderRadius={'10px'}
-      bg={`linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url('${crimeImage}') no-repeat center`}
+      bg={`linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url('${crimeImage}') no-repeat center`}
       bgSize={'cover'}
       color={'white'}
     >

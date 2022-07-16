@@ -10,6 +10,7 @@ import {
 import Navbar from '@components/Navbar/Navbar';
 import MiddleSection from '@components/MiddleSection/MiddleSection';
 import CrimeSection from '@components/CrimeSection/CrimeSection';
+import ContactSection from '@components/ContactSection/ContactSection';
 
 const Home = () => {
   return (
@@ -59,6 +60,14 @@ const Home = () => {
       <MiddleSection />
       <Box mb={8}>
         <CrimeSection />
+      </Box>
+      <Box textAlign={'center'} my={'4rem'}>
+        <Text>Fill up to get a qote</Text>
+        <Heading fontWeight={'extrabold'}>
+          World's Leading Law Consultency Agency!
+        </Heading>
+
+        <ContactSection />
       </Box>
     </Box>
   );

@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { Box, Button, Heading, HStack, Text } from '@chakra-ui/react';
 
 import {
@@ -14,10 +15,25 @@ import ContactSection from '@components/ContactSection/ContactSection';
 import Footer from '@components/Footer/Footer';
 
 const Home = () => {
+  const crimeRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollToCrime = (): void =>
+    crimeRef?.current?.scrollIntoView({
+      behavior: 'smooth',
+    });
+
+  const scrollToContact = (): void =>
+    crimeRef?.current?.scrollIntoView({
+      behavior: 'smooth',
+    });
+
   return (
     <Box>
       <Box bg={overlayBg} bgSize={'cover'} h={{ base: '500px', sm: '600px' }}>
-        <Navbar />
+        <Navbar
+          scrollToCrime={scrollToCrime}
+          scrollToContact={scrollToContact}
+        />
         <Box
           textAlign={'center'}
           mt={{ base: '8rem', sm: '12rem' }}
@@ -58,9 +74,11 @@ const Home = () => {
         </HStack>
       </Box>
       <MiddleSection />
-      <Box mb={8}>
+
+      <Box mb={8} ref={crimeRef}>
         <CrimeSection />
       </Box>
+
       <Box textAlign={'center'} my={'4rem'}>
         <Text>Fill up to get a qote</Text>
         <Heading fontWeight={'extrabold'}>
@@ -68,7 +86,10 @@ const Home = () => {
         </Heading>
         <ContactSection />
       </Box>
-      <Footer />
+
+      <Box ref={crimeRef}>
+        <Footer />
+      </Box>
     </Box>
   );
 };

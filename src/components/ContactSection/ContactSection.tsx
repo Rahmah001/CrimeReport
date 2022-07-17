@@ -17,7 +17,7 @@ import { formValues } from 'src/interfaces';
 import { firestoreDb } from 'src/libs';
 
 const ContactSection = () => {
-  const { register, handleSubmit, formState } = useForm<formValues>();
+  const { register, handleSubmit, formState, reset } = useForm<formValues>();
 
   const toast = useToast();
 
@@ -36,6 +36,7 @@ const ContactSection = () => {
           description: 'Expect a response from us ASAP!',
           isClosable: true,
         });
+        reset();
       })
       .catch((err: FirestoreError) => {
         console.log('Error', err.message);

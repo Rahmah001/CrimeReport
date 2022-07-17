@@ -16,7 +16,7 @@ const MiddleSection = () => {
       <Container maxWidth={'container.lg'}>
         <Stack direction={{ base: 'column', sm: 'row' }} spacing={6}>
           <Box>
-            <Heading fontWeight={'extrabold'} color={'#385898'}>
+            <Heading fontWeight={'extrabold'} colorScheme={'#385898'}>
               Dont Feel Helpless...
             </Heading>
             <Heading fontWeight={'extrabold'}>We Fight for safety.</Heading>

@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <Box
       py={'4rem'}
-      bg={`linear-gradient(0deg, rgba(20, 15, 0, 0.8), rgba(0, 0, 0, 0.8)),url('${FooterBg}') no-repeat center`}
+      bg={`linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url('${FooterBg}') no-repeat center`}
       bgSize={'cover'}
     >
       <Container maxW={'conatiner.lg'}>

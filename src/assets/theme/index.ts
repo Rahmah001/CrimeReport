@@ -9,12 +9,12 @@ export const theme = extendTheme({
   components: {
     Input: {
       defaultProps: {
-        focusBorderColor: 'facebook.500',
+        focusBorderColor: 'purple.300',
       },
     },
     Select: {
       defaultProps: {
-        focusBorderColor: 'facebook.500',
+        focusBorderColor: 'purple.300',
       },
     },
   },

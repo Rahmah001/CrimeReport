@@ -83,7 +83,12 @@ const Home = () => {
           >
             Report crime
           </Button>
-          <Button variant={'outline'} size={'sm'} colorScheme="facebook">
+          <Button
+            onClick={scrollToReport}
+            variant={'outline'}
+            size={'sm'}
+            colorScheme="facebook"
+          >
             Committed to safety
           </Button>
         </HStack>

@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import {
   Button,
   Container,
@@ -9,7 +7,7 @@ import {
   Select,
   useToast,
 } from '@chakra-ui/react';
-import { addDoc, collection, doc, FirestoreError } from 'firebase/firestore';
+import { addDoc, collection, FirestoreError } from 'firebase/firestore';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 import { bgGradient, buttonGradient } from 'src/constants';

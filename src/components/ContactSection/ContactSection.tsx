@@ -17,18 +17,15 @@ import { formValues } from 'src/interfaces';
 import { firestoreDb } from 'src/libs';
 
 const ContactSection = () => {
-  const { register, handleSubmit } = useForm<formValues>();
-  const [isLoading, setIsLoading] = useState(false);
+  const { register, handleSubmit, formState } = useForm<formValues>();
 
   const toast = useToast();
 
   const handleCrimeSubmit: SubmitHandler<formValues> = async (data) => {
     console.log(data);
-    setIsLoading(true);
     const collectioRef = collection(firestoreDb, 'crimes');
     await addDoc(collectioRef, data)
       .then(() => {
-        setIsLoading(false);
         console.log('sent!');
         toast({
           status: 'success',
@@ -41,7 +38,6 @@ const ContactSection = () => {
         });
       })
       .catch((err: FirestoreError) => {
-        setIsLoading(false);
         console.log('Error', err.message);
         toast({
           status: 'error',
@@ -107,7 +103,7 @@ const ContactSection = () => {
           _hover={buttonGradient}
           _focus={buttonGradient}
           color={'#000'}
-          isLoading={isLoading}
+          isLoading={formState.isSubmitting}
         >
           Submit now!
         </Button>

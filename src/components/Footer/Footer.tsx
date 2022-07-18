@@ -25,6 +25,10 @@ const Footer = () => {
 
       <Container maxWidth={'container.md'}>
         <NewsLetter />
+
+        <Heading color={'white'} fontSize={'sm'} mt={'2rem'}>
+          designed by Olagbile Abdul Samad
+        </Heading>
       </Container>
     </Box>
   );

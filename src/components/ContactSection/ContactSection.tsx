@@ -22,7 +22,8 @@ const ContactSection = () => {
   const handleCrimeSubmit: SubmitHandler<formValues> = async (data) => {
     console.log(data);
     const collectioRef = collection(firestoreDb, 'crimes');
-    await addDoc(collectioRef, data)
+    const newData = { ...data, attendedTo: false };
+    await addDoc(collectioRef, newData)
       .then(() => {
         console.log('sent!');
         toast({

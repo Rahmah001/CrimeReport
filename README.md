@@ -2,6 +2,10 @@
 
 Crime Report is a plaform whereby you can report any crime around you.
 
+#### Dont Feel Helpless, we are here for you.
+
+Is there any crime happening around you or your loved ones we're one call away.
+
 ## Getting Started
 
 First, run the development server:

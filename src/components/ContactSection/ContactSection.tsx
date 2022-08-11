@@ -20,12 +20,10 @@ const ContactSection = () => {
   const toast = useToast();
 
   const handleCrimeSubmit: SubmitHandler<formValues> = async (data) => {
-    console.log(data);
     const collectioRef = collection(firestoreDb, 'crimes');
     const newData = { ...data, attendedTo: false };
     await addDoc(collectioRef, newData)
       .then(() => {
-        console.log('sent!');
         toast({
           status: 'success',
           containerStyle: {
@@ -38,7 +36,6 @@ const ContactSection = () => {
         reset();
       })
       .catch((err: FirestoreError) => {
-        console.log('Error', err.message);
         toast({
           status: 'error',
           containerStyle: {

@@ -50,7 +50,7 @@ const Home = () => {
         />
         <Box
           textAlign={'center'}
-          mt={{ base: '8rem', sm: '12rem' }}
+          marginTop={{ base: '8rem', sm: '12rem' }}
           color={'white'}
         >
           <Heading fontWeight={'extrabold'} size={headingResSize}>
@@ -61,12 +61,12 @@ const Home = () => {
             bgClip={'text'}
             fontWeight={'extrabold'}
             size={headingResSize}
-            mt={{ base: 0, sm: 2 }}
+            marginTop={{ base: 0, sm: 2 }}
           >
             we are here for you.
           </Heading>
 
-          <Text mt={{ base: 0, sm: 4 }}>
+          <Text marginTop={{ base: 0, sm: 4 }}>
             Is there any crime happening around you
           </Text>
           <Text>or your loved ones we're one call away.</Text>
@@ -98,7 +98,7 @@ const Home = () => {
         <MiddleSection />
       </Box>
 
-      <Box mb={8} ref={crimeRef}>
+      <Box marginBottom={8} ref={crimeRef}>
         <CrimeSection />
       </Box>
 

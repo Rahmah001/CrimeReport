@@ -20,7 +20,7 @@ const MiddleSection = () => {
               Dont Feel Helpless...
             </Heading>
             <Heading fontWeight={'extrabold'}>We Fight for safety.</Heading>
-            <Text fontWeight={'semibold'} my={4}>
+            <Text fontWeight={'semibold'} marginY={4}>
               Your Safety is priority.
             </Text>
             <Button size={'sm'} colorScheme={'facebook'}>

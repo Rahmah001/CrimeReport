@@ -4,7 +4,9 @@ import { buttonGradient } from 'src/constants';
 import { CrimeCardProps } from 'src/interfaces';
 
 const CrimeCard: React.FC<CrimeCardProps> = ({ crimeData }) => {
+  
   const { crimeImage, crimeText, crimeTitle } = crimeData;
+  
   return (
     <Box
       p={8}

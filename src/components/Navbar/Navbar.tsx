@@ -14,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = ({
       alignItems={'center'}
       flexDir={{ base: 'column', sm: 'row' }}
       height={'7vh'}
-      pt={'1.5rem'}
+      paddingTop={'1.5rem'}
       color={'#fff'}
       maxWidth={'container.lg'}
     >
@@ -24,7 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
       <HStack
         spacing={7}
-        mt={{ base: '4', sm: 0 }}
+        marginTop={{ base: '4', sm: 0 }}
         fontSize={{ base: 'sm', sm: 'md' }}
       >
         <Link onClick={scrollToAbout}>About</Link>
